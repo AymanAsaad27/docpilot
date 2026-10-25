@@ -1,0 +1,28 @@
+# Python environments
+.venv/
+venv/
+
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS and editor files
+.DS_Store
+.vscode/
+
+# Generated vector database
+chroma_db/
+
+# Local logs and traces
+logs/*.jsonl
+
+# Secrets and local environment variables
+.env
+.env.*
+!.env.example
+
+# Temporary backup files
+*.bak

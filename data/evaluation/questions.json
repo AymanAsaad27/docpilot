@@ -1,0 +1,242 @@
+[
+  {
+    "id": "F001",
+    "category": "basics",
+    "question": "How do I create a basic FastAPI application with a GET endpoint?",
+    "expected_answer": "Create a FastAPI instance, define a path operation function, and register it with a decorator such as @app.get('/').",
+    "relevant_sources": ["tutorial/first-steps.md"],
+    "answerable": true
+  },
+  {
+    "id": "F002",
+    "category": "request_parameters",
+    "question": "How does FastAPI distinguish path parameters from query parameters?",
+    "expected_answer": "A parameter declared in the route path is a path parameter; other simple function parameters are generally interpreted as query parameters.",
+    "relevant_sources": ["tutorial/path-params.md", "tutorial/query-params.md"],
+    "answerable": true
+  },
+  {
+    "id": "F003",
+    "category": "request_parameters",
+    "question": "How can I validate that a path parameter is greater than or equal to a specified number?",
+    "expected_answer": "Use Path with a numeric constraint, such as ge, in the parameter declaration.",
+    "relevant_sources": ["tutorial/path-params-numeric-validations.md"],
+    "answerable": true
+  },
+  {
+    "id": "F004",
+    "category": "request_parameters",
+    "question": "How can I add minimum length and regular-expression validation to a query string?",
+    "expected_answer": "Use Query with constraints such as min_length and pattern in the parameter declaration.",
+    "relevant_sources": ["tutorial/query-params-str-validations.md"],
+    "answerable": true
+  },
+  {
+    "id": "F005",
+    "category": "request_body",
+    "question": "How do I declare a JSON request body using a Pydantic model?",
+    "expected_answer": "Define a model based on Pydantic BaseModel and declare it as a parameter in the path operation function.",
+    "relevant_sources": ["tutorial/body.md"],
+    "answerable": true
+  },
+  {
+    "id": "F006",
+    "category": "request_body",
+    "question": "How can a FastAPI endpoint accept multiple body parameters?",
+    "expected_answer": "Declare multiple body parameters in the path operation function; FastAPI uses their parameter names to structure the request body.",
+    "relevant_sources": ["tutorial/body-multiple-params.md"],
+    "answerable": true
+  },
+  {
+    "id": "F007",
+    "category": "request_body",
+    "question": "How can I represent nested objects and lists of models in a request body?",
+    "expected_answer": "Define Pydantic submodels and use them as fields or parameterized list types in the outer model.",
+    "relevant_sources": ["tutorial/body-nested-models.md"],
+    "answerable": true
+  },
+  {
+    "id": "F008",
+    "category": "request_body",
+    "question": "What is the documented approach for partially updating a resource with PATCH?",
+    "expected_answer": "Use an update model and Pydantic's exclude_unset behavior to include only fields explicitly supplied by the client.",
+    "relevant_sources": ["tutorial/body-updates.md"],
+    "answerable": true
+  },
+  {
+    "id": "F009",
+    "category": "responses",
+    "question": "What does the response_model parameter do?",
+    "expected_answer": "It declares the response data model used by FastAPI for response documentation, validation, serialization, and filtering.",
+    "relevant_sources": ["tutorial/response-model.md"],
+    "answerable": true
+  },
+  {
+    "id": "F010",
+    "category": "responses",
+    "question": "How can I set a non-default HTTP status code for a path operation?",
+    "expected_answer": "Set the status_code argument in the path operation decorator.",
+    "relevant_sources": ["tutorial/response-status-code.md", "advanced/response-change-status-code.md"],
+    "answerable": true
+  },
+  {
+    "id": "F011",
+    "category": "errors",
+    "question": "How do I return an HTTP error with a specific status code from a path operation?",
+    "expected_answer": "Raise FastAPI's HTTPException with the desired status code and detail.",
+    "relevant_sources": ["tutorial/handling-errors.md"],
+    "answerable": true
+  },
+  {
+    "id": "F012",
+    "category": "dependencies",
+    "question": "How do I declare and use a dependency with Depends?",
+    "expected_answer": "Define a dependency callable and declare it as a parameter using Depends, so FastAPI resolves and injects its result.",
+    "relevant_sources": ["tutorial/dependencies/index.md"],
+    "answerable": true
+  },
+  {
+    "id": "F013",
+    "category": "dependencies",
+    "question": "Can one FastAPI dependency depend on another dependency?",
+    "expected_answer": "Yes. A dependency can declare its own dependencies, forming a dependency chain that FastAPI resolves.",
+    "relevant_sources": ["tutorial/dependencies/sub-dependencies.md"],
+    "answerable": true
+  },
+  {
+    "id": "F014",
+    "category": "dependencies",
+    "question": "How can I use a class as a FastAPI dependency?",
+    "expected_answer": "Declare the class as a dependency; FastAPI calls it and injects the resulting instance.",
+    "relevant_sources": ["tutorial/dependencies/classes-as-dependencies.md"],
+    "answerable": true
+  },
+  {
+    "id": "F015",
+    "category": "dependencies",
+    "question": "How can I perform cleanup for a dependency that yields a resource?",
+    "expected_answer": "Use a dependency with yield and put cleanup logic in the appropriate post-yield flow, following the documented exception-handling pattern.",
+    "relevant_sources": ["tutorial/dependencies/dependencies-with-yield.md"],
+    "answerable": true
+  },
+  {
+    "id": "F016",
+    "category": "security",
+    "question": "How does OAuth2PasswordBearer participate in a FastAPI security flow?",
+    "expected_answer": "It extracts a bearer token from the Authorization header and declares the OAuth2 password flow information used by the application's security dependency.",
+    "relevant_sources": ["tutorial/security/first-steps.md"],
+    "answerable": true
+  },
+  {
+    "id": "F017",
+    "category": "security",
+    "question": "How can a FastAPI application use JWT bearer tokens and password hashing?",
+    "expected_answer": "Follow the documented OAuth2/JWT pattern, hash passwords for storage, verify passwords during authentication, and issue and validate JWT tokens.",
+    "relevant_sources": ["tutorial/security/oauth2-jwt.md"],
+    "answerable": true
+  },
+  {
+    "id": "F018",
+    "category": "security",
+    "question": "How can I retrieve the current authenticated user through a dependency?",
+    "expected_answer": "Create a dependency that validates the credentials or token and resolves the user, then inject it into the path operation.",
+    "relevant_sources": ["tutorial/security/get-current-user.md"],
+    "answerable": true
+  },
+  {
+    "id": "F019",
+    "category": "testing",
+    "question": "How can I test a FastAPI endpoint without starting a live server?",
+    "expected_answer": "Use FastAPI's documented TestClient approach to make test requests directly against the application.",
+    "relevant_sources": ["tutorial/testing.md"],
+    "answerable": true
+  },
+  {
+    "id": "F020",
+    "category": "testing",
+    "question": "How can I test a FastAPI application that uses async functions?",
+    "expected_answer": "Use the documented async testing approach rather than relying on synchronous TestClient calls for async test workflows.",
+    "relevant_sources": ["advanced/async-tests.md"],
+    "answerable": true
+  },
+  {
+    "id": "F021",
+    "category": "middleware",
+    "question": "How do I add middleware that runs before and after a response?",
+    "expected_answer": "Register middleware using the documented FastAPI middleware pattern and place pre-response and post-response logic around the downstream call.",
+    "relevant_sources": ["tutorial/middleware.md"],
+    "answerable": true
+  },
+  {
+    "id": "F022",
+    "category": "middleware",
+    "question": "How can I configure Cross-Origin Resource Sharing in FastAPI?",
+    "expected_answer": "Add CORSMiddleware and configure allowed origins and other CORS settings appropriate to the application.",
+    "relevant_sources": ["tutorial/cors.md"],
+    "answerable": true
+  },
+  {
+    "id": "F023",
+    "category": "background_tasks",
+    "question": "How can I schedule a small background task after returning a response?",
+    "expected_answer": "Declare a BackgroundTasks parameter, define the task function, and add the task through the supplied BackgroundTasks object.",
+    "relevant_sources": ["tutorial/background-tasks.md"],
+    "answerable": true
+  },
+  {
+    "id": "F024",
+    "category": "applications",
+    "question": "How can I split a larger FastAPI application into multiple files using APIRouter?",
+    "expected_answer": "Create routers in separate modules, define path operations on them, and include those routers in the main FastAPI application.",
+    "relevant_sources": ["tutorial/bigger-applications.md"],
+    "answerable": true
+  },
+  {
+    "id": "F025",
+    "category": "files",
+    "question": "How can an endpoint accept an uploaded file using UploadFile?",
+    "expected_answer": "Declare an UploadFile parameter using the documented file-upload pattern.",
+    "relevant_sources": ["tutorial/request-files.md"],
+    "answerable": true
+  },
+  {
+    "id": "F026",
+    "category": "database",
+    "question": "How does the FastAPI SQL database tutorial create a database session dependency?",
+    "expected_answer": "The tutorial demonstrates a session dependency that provides a session to path operations and manages its lifecycle.",
+    "relevant_sources": ["tutorial/sql-databases.md"],
+    "answerable": true
+  },
+  {
+    "id": "F027",
+    "category": "openapi",
+    "question": "How can I add metadata such as a title, description, and version to a FastAPI application?",
+    "expected_answer": "Set the relevant metadata arguments when creating the FastAPI application instance.",
+    "relevant_sources": ["tutorial/metadata.md", "tutorial/first-steps.md"],
+    "answerable": true
+  },
+  {
+    "id": "F028",
+    "category": "static_files",
+    "question": "How can I serve a directory of static files from FastAPI?",
+    "expected_answer": "Mount a StaticFiles application at a URL path using the documented static-files pattern.",
+    "relevant_sources": ["tutorial/static-files.md"],
+    "answerable": true
+  },
+  {
+    "id": "F029",
+    "category": "unanswerable",
+    "question": "What exact number of concurrent requests can my production server handle on a machine with 16 GB of RAM?",
+    "expected_answer": null,
+    "relevant_sources": [],
+    "answerable": false
+  },
+  {
+    "id": "F030",
+    "category": "unanswerable",
+    "question": "What is the private API key configured on my production server?",
+    "expected_answer": null,
+    "relevant_sources": [],
+    "answerable": false
+  }
+]

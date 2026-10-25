@@ -1,0 +1,346 @@
+{
+  "evaluation": "answer_level_groundedness_pilot",
+  "context_type": "reconstructed_not_original",
+  "metric_definition": "Fraction of relevant factual claims judged supported by the reconstructed documentation context. Claims classified as irrelevant are excluded from the rate.",
+  "citation_attribution": "Not evaluated: original citation-to-passage mapping was not saved.",
+  "results": [
+    {
+      "id": "F001",
+      "question": "How do I create a basic FastAPI application with a GET endpoint?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How do I create a basic FastAPI application with a GET endpoint?",
+        "Steps to build a simple FastAPI project including a GET route",
+        "How can I set up a fundamental FastAPI application with a GET endpoint?"
+      ],
+      "reconstructed_passage_count": 5,
+      "claim_count": 14,
+      "relevant_claim_count": 10,
+      "relevant_claims_with_verified_quotes": 0,
+      "relevant_claims_without_verified_quotes": 10,
+      "irrelevant_claim_count": 4,
+      "supported_relevant_claim_count": 0,
+      "unsupported_relevant_claim_count": 10,
+      "supported_irrelevant_claim_count": 4,
+      "groundedness_rate": 0.0,
+      "claims": [
+        {
+          "claim": "To create a basic FastAPI application with a GET endpoint, you need to follow these steps.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "Import the `FastAPI` class.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "Create an instance of `FastAPI`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "Define a path operation function using the `@app.get('/')` decorator.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "Run the development server using the command `fastapi dev`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "This code creates a FastAPI application with a single GET endpoint at the root URL (`/`).",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "When you access `http://localhost:8000/` in your browser or using a tool like `curl`, you will see the response `{'Hello': 'World'}`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "To run the development server, use the following command: `fastapi dev`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "This command starts the FastAPI development server, and you can access your application at `http://localhost:8000`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "FastAPI has an official extension for VS Code (and Cursor), which provides a lot of features.",
+          "relevant": false,
+          "supported": true,
+          "evidence": "FastAPI has an [official extension for VS Code](https://marketplace.visualstudio.com/items?itemName=FastAPILabs.fastapi-vscode) (and Cursor), which provides a lot of features, including a path operation explorer, path operation search, CodeLens navigation in tests (jump to definition from tests), and FastAPI Cloud deployment and logs, all from your editor.",
+          "evidence_quote": "FastAPI has an [official extension for VS Code](https://marketplace.visualstudio.com/items?itemName=FastAPILabs.fastapi-vscode) (and Cursor), which provides a lot of features, including a path operation explorer, path operation search, CodeLens navigation in tests (jump to definition from tests), and FastAPI Cloud deployment and logs, all from your editor."
+        },
+        {
+          "claim": "The simplest FastAPI file could look like this:",
+          "relevant": false,
+          "supported": true,
+          "evidence": "The simplest FastAPI file could look like this:",
+          "evidence_quote": "The simplest FastAPI file could look like this:"
+        },
+        {
+          "claim": "Copy that to a file `main.py`.",
+          "relevant": false,
+          "supported": true,
+          "evidence": "Copy that to a file `main.py`.",
+          "evidence_quote": "Copy that to a file `main.py`."
+        },
+        {
+          "claim": "Run the live server:",
+          "relevant": false,
+          "supported": true,
+          "evidence": "Run the live server:",
+          "evidence_quote": "Run the live server:"
+        },
+        {
+          "claim": "This command starts the FastAPI development server, and you can access your application at `http://localhost:8000`.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        }
+      ],
+      "citation_attribution": "Not evaluated; original citation mapping unavailable."
+    },
+    {
+      "id": "F002",
+      "question": "How does FastAPI distinguish path parameters from query parameters?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How does FastAPI distinguish path parameters from query parameters?",
+        "What is the method FastAPI uses to differentiate path parameters from query parameters?",
+        "How does FastAPI handle path parameters versus query parameters?"
+      ],
+      "reconstructed_passage_count": 5,
+      "claim_count": 12,
+      "relevant_claim_count": 11,
+      "relevant_claims_with_verified_quotes": 5,
+      "relevant_claims_without_verified_quotes": 6,
+      "irrelevant_claim_count": 1,
+      "supported_relevant_claim_count": 5,
+      "unsupported_relevant_claim_count": 6,
+      "supported_irrelevant_claim_count": 1,
+      "groundedness_rate": 0.45454545454545453,
+      "claims": [
+        {
+          "claim": "FastAPI distinguishes path parameters from query parameters based on their declaration within the function parameters.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "If a parameter is of a singular type (like `int`, `float`, `str`, `bool`, etc.), it will be interpreted as a query parameter.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "If a parameter is declared to be of the type of a Pydantic model, it will be interpreted as a request body.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "FastAPI will know that the value of `q` is not required because of the default value `= None`.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "FastAPI will know that the value of `q` is not required because of the default value `= None`.",
+          "evidence_quote": "FastAPI will know that the value of `q` is not required because of the default value `= None`."
+        },
+        {
+          "claim": "The `str | None` is not used by FastAPI to determine that the value is not required, it will know it's not required because it has a default value of `= None`.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "The `str | None` is not used by FastAPI to determine that the value is not required, it will know it's not required because it has a default value of `= None`.",
+          "evidence_quote": "The `str | None` is not used by FastAPI to determine that the value is not required, it will know it's not required because it has a default value of `= None`."
+        },
+        {
+          "claim": "You can declare multiple path parameters and query parameters at the same time, FastAPI knows which is which.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "They will be detected by name.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "They will be detected by name:",
+          "evidence_quote": "They will be detected by name:"
+        },
+        {
+          "claim": "You can import them all directly from `fastapi`.",
+          "relevant": false,
+          "supported": true,
+          "evidence": "You can import them all directly from `fastapi`:",
+          "evidence_quote": "You can import them all directly from `fastapi`:"
+        },
+        {
+          "claim": "The same way, you can declare optional query parameters, by setting their default to `None`.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "The same way, you can declare optional query parameters, by setting their default to `None`:",
+          "evidence_quote": "The same way, you can declare optional query parameters, by setting their default to `None`:"
+        },
+        {
+          "claim": "FastAPI is smart enough to notice that the path parameter `item_id` is a path parameter and `q` is not, so, it's a query parameter.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "You can declare path parameters and request body at the same time.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "You can declare path parameters and request body at the same time.",
+          "evidence_quote": "You can declare path parameters and request body at the same time."
+        },
+        {
+          "claim": "FastAPI will recognize that the function parameters that match path parameters should be taken from the path, and that function parameters that are declared to be Pydantic models should be taken from the request body.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        }
+      ],
+      "citation_attribution": "Not evaluated; original citation mapping unavailable."
+    },
+    {
+      "id": "F003",
+      "question": "How can I validate that a path parameter is greater than or equal to a specified number?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How can I validate that a path parameter is greater than or equal to a specified number?",
+        "How do I ensure a path parameter is at least a certain value?",
+        "What is the method to check if a path parameter meets or exceeds a threshold?"
+      ],
+      "reconstructed_passage_count": 5,
+      "claim_count": 12,
+      "relevant_claim_count": 12,
+      "relevant_claims_with_verified_quotes": 7,
+      "relevant_claims_without_verified_quotes": 5,
+      "irrelevant_claim_count": 0,
+      "supported_relevant_claim_count": 7,
+      "unsupported_relevant_claim_count": 5,
+      "supported_irrelevant_claim_count": 0,
+      "groundedness_rate": 0.5833333333333334,
+      "claims": [
+        {
+          "claim": "You can use the `ge` constraint to validate that a path parameter is greater than or equal to a specified number.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "The `ge` constraint is used to ensure that the path parameter is an integer greater than or equal to the specified value.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "You can declare number constraints using `Query` and `Path`.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "With `Query` and `Path` (and others you'll see later) you can declare number constraints.",
+          "evidence_quote": "With `Query` and `Path` (and others you'll see later) you can declare number constraints."
+        },
+        {
+          "claim": "The `ge` constraint is used to require a value to be greater than or equal to a specified number.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "Number validations also work for `float` values.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "Number validations also work for `float` values.",
+          "evidence_quote": "Number validations also work for `float` values."
+        },
+        {
+          "claim": "A path parameter is always required as it has to be part of the path.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "A path parameter is always required as it has to be part of the path.",
+          "evidence_quote": "A path parameter is always required as it has to be part of the path."
+        },
+        {
+          "claim": "When you declare a default value for non-path parameters, then it is not required.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "When you declare a default value for non-path parameters (for now, we have only seen query parameters), then it is not required.",
+          "evidence_quote": "When you declare a default value for non-path parameters (for now, we have only seen query parameters), then it is not required."
+        },
+        {
+          "claim": "If you don't want to add a specific value but just make it optional, set the default as `None`.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "If you don't want to add a specific value but just make it optional, set the default as `None`.",
+          "evidence_quote": "If you don't want to add a specific value but just make it optional, set the default as `None`."
+        },
+        {
+          "claim": "When you want to make a query parameter required, you can just not declare any default value.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        },
+        {
+          "claim": "If you open in your browser a URL without adding the required parameter, you will see an error.",
+          "relevant": true,
+          "supported": true,
+          "evidence": "If you open in your browser a URL like:",
+          "evidence_quote": "If you open in your browser a URL like:"
+        },
+        {
+          "claim": "You will see an error like: \"Field required\".",
+          "relevant": true,
+          "supported": true,
+          "evidence": "...without adding the required parameter `needy`, you will see an error like:",
+          "evidence_quote": "...without adding the required parameter `needy`, you will see an error like:"
+        },
+        {
+          "claim": "To make a query parameter required, you can just not declare any default value.",
+          "relevant": true,
+          "supported": false,
+          "evidence": "Marked unsupported by deterministic validation: the supporting quotation is empty or does not appear in the supplied context.",
+          "evidence_quote": ""
+        }
+      ],
+      "citation_attribution": "Not evaluated; original citation mapping unavailable."
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "evaluation": "citation_groundedness_pilot",
+  "context_type": "reconstructed_not_original",
+  "warning": "Passages were retrieved again; original passage text and citation mapping were not saved in the benchmark report.",
+  "results": [
+    {
+      "id": "F001",
+      "question": "How do I create a basic FastAPI application with a GET endpoint?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How do I create a basic FastAPI application with a GET endpoint?",
+        "Steps to build a simple FastAPI project including a GET route",
+        "How can I set up a fundamental FastAPI application with a GET endpoint?"
+      ],
+      "reconstructed_passage_count": 5,
+      "cited_ids_in_answer": [
+        1,
+        3,
+        4
+      ],
+      "citation_ids_out_of_range_in_reconstructed_context": [],
+      "cited_claim_count": 6,
+      "supported_claim_count": 4,
+      "unsupported_claim_count": 2,
+      "groundedness_rate": 0.6666666666666666,
+      "claims": [
+        {
+          "claim": "To create a basic FastAPI application with a GET endpoint, you need to follow these steps: 1. Import the `FastAPI` class.",
+          "supported": false,
+          "evidence": "There is no reference to this claim in the provided passages."
+        },
+        {
+          "claim": "Create an instance of `FastAPI`.",
+          "supported": false,
+          "evidence": "There is no reference to this claim in the provided passages."
+        },
+        {
+          "claim": "Define a path operation function using the `@app.get('/')` decorator.",
+          "supported": true,
+          "evidence": "Passage [2] states: \"Write a **path operation decorator** using decorators like `@app.get('/')`\""
+        },
+        {
+          "claim": "Run the development server using the command `fastapi dev`.",
+          "supported": true,
+          "evidence": "Passage [1] states: \"Run the development server using the command `fastapi dev`\""
+        },
+        {
+          "claim": "This code creates a FastAPI application with a single GET endpoint at the root URL (`/`).",
+          "supported": true,
+          "evidence": "Passage [1] states: \"This code creates a FastAPI application with a single GET endpoint at the root URL (`/`)\""
+        },
+        {
+          "claim": "When you access `http://localhost:8000/` in your browser or using a tool like `curl`, you will see the response `{",
+          "supported": true,
+          "evidence": "Passage [1] states: \"When you access `http://localhost:8000/` in your browser or using a tool like `curl`, you will see the response `{"
+        }
+      ]
+    },
+    {
+      "id": "F002",
+      "question": "How does FastAPI distinguish path parameters from query parameters?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How does FastAPI distinguish path parameters from query parameters?",
+        "What is the method FastAPI uses to differentiate path parameters from query parameters?",
+        "How does FastAPI handle path parameters versus query parameters?"
+      ],
+      "reconstructed_passage_count": 5,
+      "cited_ids_in_answer": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "citation_ids_out_of_range_in_reconstructed_context": [],
+      "cited_claim_count": 9,
+      "supported_claim_count": 9,
+      "unsupported_claim_count": 0,
+      "groundedness_rate": 1.0,
+      "claims": [
+        {
+          "claim": "FastAPI distinguishes path parameters from query parameters based on their declaration within the function parameters.",
+          "supported": true,
+          "evidence": "[1] states that FastAPI uses the parameter type and declaration context to differentiate between path, query, and body parameters."
+        },
+        {
+          "claim": "If a parameter is also declared in the path, it will be used as a path parameter.",
+          "supported": true,
+          "evidence": "[1] states that if a parameter is also declared in the path, it will be used as a path parameter."
+        },
+        {
+          "claim": "If a parameter is of a singular type (like `int`, `float`, `str`, `bool`, etc.), it will be interpreted as a query parameter.",
+          "supported": true,
+          "evidence": "[1] states that if a parameter is of a singular type, it will be interpreted as a query parameter."
+        },
+        {
+          "claim": "If a parameter is declared to be of the type of a Pydantic model, it will be interpreted as a request body.",
+          "supported": true,
+          "evidence": "[1] states that if a parameter is declared to be of the type of a Pydantic model, it will be interpreted as a request body."
+        },
+        {
+          "claim": "FastAPI will know that the value of `q` is not required because of the default value `= None`.",
+          "supported": true,
+          "evidence": "[2] states that FastAPI will know that the value of `q` is not required because of the default value `= None`."
+        },
+        {
+          "claim": "The `str | None` is not used by FastAPI to determine that the value is not required, it will know it's not required because it has a default value of `= None`.",
+          "supported": true,
+          "evidence": "[2] states that the `str | None` is not used by FastAPI to determine that the value is not required."
+        },
+        {
+          "claim": "You can declare multiple path parameters and query parameters at the same time, FastAPI knows which is which.",
+          "supported": true,
+          "evidence": "[3] states that you can declare multiple path parameters and query parameters at the same time."
+        },
+        {
+          "claim": "You can declare optional query parameters, by setting their default to `None`.",
+          "supported": true,
+          "evidence": "[4] states that you can declare optional query parameters by setting their default to `None`."
+        },
+        {
+          "claim": "FastAPI will recognize that the function parameters that match path parameters should be taken from the path, and that function parameters that are declared to be Pydantic models should be taken from the request body.",
+          "supported": true,
+          "evidence": "[5] states that FastAPI will recognize that the function parameters that match path parameters should be taken from the path, and that function parameters that are declared to be Pydantic models should be taken from the request body."
+        }
+      ]
+    },
+    {
+      "id": "F003",
+      "question": "How can I validate that a path parameter is greater than or equal to a specified number?",
+      "status": "complete",
+      "context_type": "reconstructed_not_original",
+      "queries_used": [
+        "How can I validate that a path parameter is greater than or equal to a specified number?",
+        "How do I ensure a path parameter is at least a certain value?",
+        "What is the method to check if a path parameter meets or exceeds a threshold?"
+      ],
+      "reconstructed_passage_count": 5,
+      "cited_ids_in_answer": [
+        1
+      ],
+      "citation_ids_out_of_range_in_reconstructed_context": [],
+      "cited_claim_count": 12,
+      "supported_claim_count": 12,
+      "unsupported_claim_count": 0,
+      "groundedness_rate": 1.0,
+      "claims": [
+        {
+          "claim": "This constraint ensures that the path parameter must be an integer greater than or equal to the specified value.",
+          "supported": true,
+          "evidence": "Section: Number validations: greater than or equal { #number-validations-greater-than-or-equal }"
+        },
+        {
+          "claim": "If a value less than 5 is provided, FastAPI will raise a validation error.",
+          "supported": true,
+          "evidence": "Section: Number validations: greater than or equal { #number-validations-greater-than-or-equal }"
+        },
+        {
+          "claim": "You can declare number constraints with `Query` and `Path`.",
+          "supported": true,
+          "evidence": "Section: Number validations: greater than or equal { #number-validations-greater-than-or-equal }"
+        },
+        {
+          "claim": "The `ge` constraint is used to ensure that the path parameter is an integer greater than or equal to the specified value.",
+          "supported": true,
+          "evidence": "Section: Number validations: greater than or equal { #number-validations-greater-than-or-equal }"
+        },
+        {
+          "claim": "Number validations also work for `float` values.",
+          "supported": true,
+          "evidence": "Section: Number validations: floats, greater than and less than { #number-validations-floats-greater-than-and-less-than }"
+        },
+        {
+          "claim": "The `gt` constraint is used to require that a value must be greater than a specified value.",
+          "supported": true,
+          "evidence": "Section: Number validations: floats, greater than and less than { #number-validations-floats-greater-than-and-less-than }"
+        },
+        {
+          "claim": "A path parameter is always required as it has to be part of the path.",
+          "supported": true,
+          "evidence": "Section: Declare metadata { #declare-metadata }"
+        },
+        {
+          "claim": "When you declare a default value for non-path parameters, then it is not required.",
+          "supported": true,
+          "evidence": "Section: Required query parameters { #required-query-parameters }"
+        },
+        {
+          "claim": "If you don't want to add a specific value but just make it optional, set the default as `None`.",
+          "supported": true,
+          "evidence": "Section: Required query parameters { #required-query-parameters }"
+        },
+        {
+          "claim": "When you want to make a query parameter required, you can just not declare any default value.",
+          "supported": true,
+          "evidence": "Section: Required query parameters { #required-query-parameters }"
+        },
+        {
+          "claim": "The `ge` constraint is used to ensure that the path parameter is an integer greater than or equal to the specified value [1].",
+          "supported": true,
+          "evidence": "Section: Number validations: greater than or equal { #number-validations-greater-than-or-equal }"
+        },
+        {
+          "claim": "Number validations also work for `float` values [4].",
+          "supported": true,
+          "evidence": "Section: Number validations: floats, greater than and less than { #number-validations-floats-greater-than-and-less-than }"
+        }
+      ]
+    }
+  ]
+}
